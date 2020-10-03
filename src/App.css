@@ -43,3 +43,41 @@
 .nav-link.active {
   color: #007bff !important;
 }
+
+
+/* */
+.reactions {
+  display: flex;
+  padding: 0;
+}
+.reactions li {
+  list-style: none;
+  margin-right: 30px;
+  color: #1da1f2;
+  font-weight: bold;
+}
+
+.reactions button {
+  border: none;
+  color: #657786;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reactions button:hover {
+  color: #1da1f2;
+}
+
+.comment{
+  padding-bottom: 1.5em;
+}
+.comment_body {
+  font-size: 20px;
+  font-style: italic;
+  line-height:1.8;
+}
+
+.comment_author, .comment_date {
+  font-size: 15px;
+  font-weight: bold;
+}

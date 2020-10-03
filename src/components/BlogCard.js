@@ -7,7 +7,7 @@ const BlogCard = ({ blog, gotoBlogDetail }) => {
   return (
     blog && (
       <Col sm={6} style={{ marginBottom: "20px", maxWidth: "320px" }}>
-        {console.log(blog._id)}
+        {console.log("blog._id", blog._id)}
         <Card>
           <Card.Body>
             <Card.Title
