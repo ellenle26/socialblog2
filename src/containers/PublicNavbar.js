@@ -1,9 +1,10 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import logo from "images/logo.svg";
+import logo from "../images/logososo2.png";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ".././App.css";
 
 const PublicNavbar = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -14,29 +15,28 @@ const PublicNavbar = () => {
   const authLinks = (
     <Nav>
       <Nav.Link as={Link} to="/admin/profile">
-        <FontAwesomeIcon icon="chart-line" size="sm" /> Admin
+        <FontAwesomeIcon icon="user" size="sm" /> Admin
       </Nav.Link>
-      <Nav.Link onClick={handleLogout}>
-        <FontAwesomeIcon icon="sign-out-alt" size="sm" /> Logout
-      </Nav.Link>
+      <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
     </Nav>
   );
 
   const publicLinks = (
     <Nav>
       <Nav.Link as={Link} to="/register">
-        <FontAwesomeIcon icon="registered" size="sm" /> Register
+        Register
       </Nav.Link>
       <Nav.Link as={Link} to="/login">
-        <FontAwesomeIcon icon="sign-in-alt" size="sm" /> Login
+        Login
       </Nav.Link>
     </Nav>
   );
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="sm">
       <Navbar.Brand as={Link} to="/" className="mr-auto">
-        <img src="" alt="CoderSchool" width="200px" />
+        <img src={logo} alt="logo" height="40px" />
+        <span style={{ marginLeft: "10px", color: "#161b45" }}>SoSo App</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

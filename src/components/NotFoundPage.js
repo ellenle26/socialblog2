@@ -1,13 +1,18 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 const NotFoundPage = () => {
   return (
     <Container>
-      <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+      <Row style={{ marginTop: "50px" }}>
+        <Col md={{ span: 6, offset: 3 }} style={{ textAlign: "center" }}>
           <h1>404</h1>
-          <p>The page you are looking for does not exist.</p>
+          <p>The You Requested Could Not Be Found.</p>
+          <Image
+            src="../../images/error.png"
+            alt="errorimg"
+            style={{ width: "100%", marginTop: "50px" }}
+          />
         </Col>
       </Row>
     </Container>

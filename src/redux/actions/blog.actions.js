@@ -1,5 +1,17 @@
 import * as types from "redux/constants/blog.constants";
 import api from "redux/api";
-import { toast } from "react-toastify";
 
-export const blogActions = {};
+const getBlogList = (pageNum = 1, limit = 10) => async (dispatch) => {
+  dispatch({ type: types.GET_BLOGS_REQUEST, payload: null });
+  try {
+    const res = await api.get(`/blogs?page=${pageNum}&limit=${limit}`);
+    dispatch({ type: types.GET_BLOGS_SUCCESS, payload: res.data.data });
+    console.log("blog data ne", res.data.data);
+  } catch (err) {
+    dispatch({ type: types.GET_BLOGS_FAILURE, payload: err });
+  }
+};
+
+export const blogActions = {
+  getBlogList,
+};
