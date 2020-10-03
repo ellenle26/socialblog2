@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { blogActions } from "redux/actions";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import moment from "moment";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const BlogDetailPage = () => {
   let { id } = useParams();
@@ -67,7 +68,11 @@ const BlogDetailPage = () => {
               </small>
             </Card.Footer>
             <Card>
-              <Card.Body>asd</Card.Body>
+              <Card.Body>
+                <Card.Title>
+                  <FontAwesomeIcon icon={["far", "laugh"]} />
+                </Card.Title>
+              </Card.Body>
             </Card>
           </Card>
         </Col>
