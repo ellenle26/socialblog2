@@ -35,7 +35,7 @@ api.interceptors.response.use(
     let errorMsg = error.message || "";
     if (error.errors && error.errors.message)
       errorMsg = errorMsg + ": " + error.errors.message;
-    toast.error(errorMsg);
+    // toast.error(errorMsg);
     return Promise.reject(error);
   }
 );

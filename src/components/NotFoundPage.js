@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import notFound from "images/error.png";
 
 const NotFoundPage = () => {
   return (
@@ -9,7 +10,7 @@ const NotFoundPage = () => {
           <h1>404</h1>
           <p>The Page You Requested Could Not Be Found.</p>
           <Image
-            src="../../images/error.png"
+            src={notFound}
             alt="errorimg"
             style={{ width: "100%", marginTop: "50px" }}
           />
